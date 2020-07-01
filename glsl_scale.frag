@@ -11,7 +11,7 @@ float circle_shape(vec2 position, float radius, float scale) {
 }
 
 float scale_value(float time, float min, float max) {
-  return (max - min) * abs(sin(time)) + min;
+  return (max - min) * (sin(time) + 1.0) / 2.0 + min;
 }
 
 void main() {
